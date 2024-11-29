@@ -54,6 +54,11 @@ export class Form {
         // await yearsExperienceOptions.waitFor({ state:'visible' });
     }
     //date
+    async selectDate(day = 30){
+        await this.datePicker.click();
+        await this.page.click(`//td[@class='day'][text()='${day}']`);
+        await this.page.waitForTimeout( 3000 );
+    }
     async clickSubmitForm(){
         await this.submitButton.click();
     }

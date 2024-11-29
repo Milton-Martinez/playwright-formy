@@ -16,6 +16,7 @@ test.describe('Form Page', () => {
     await form.selectLevelEducation();
     await form.SelectGender();
     await form.selectaYearsExperience();
+    await form.selectDate();
     await form.clickSubmitForm();
     await page.waitForTimeout(3000);
     const submitMessage = await form.getSubmitMessage();
